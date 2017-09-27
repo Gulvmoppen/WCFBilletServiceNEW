@@ -8,18 +8,36 @@ using System.Text;
 
 namespace WCFBilletServiceNEW
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IBilletten" in both code and config file together.
     [ServiceContract]
-    public interface IService1
+    public interface IBilletten
     {
 
-        [OperationContract]
-        string GetData(int value);
+       
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        int BilPris();
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        int BilPrisMedBrobizz();
+
+        [OperationContract]
+        int BilPrisØresund();
+
+        [OperationBehavior]
+        int BilPrisØresundMedBroBizz();
+
+        [OperationContract]
+        int McPris();
+
+        [OperationContract]
+        int McPrisMedBrobizz();
+
+        [OperationContract]
+        int McPrisMedØresund();
+
+        [OperationContract]
+        int McPrisØresundMedBroBizz();
     }
 
 
